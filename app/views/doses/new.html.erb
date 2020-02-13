@@ -1,16 +1,25 @@
- <h2>Add dose for <%= @cocktail.name %></h2>
 
-<div class="container">
+<div class="d-flex container text-white justify-content-center">
+  <div class="row">
+    <div class="col" style="margin: 32px;">
 
- <%= simple_form_for([@cocktail, @dose]) do |f| %>
- <%= f.input :description %>
- <%= f.input :ingredient_id , collection: Ingredient.all %>
- <%= f.submit class: 'btn btn-primary' %>
- <% end %>
+     <h2>Add dose for <%= @cocktail.name %></h2>
+     <%= simple_form_for([@cocktail, @dose]) do |f| %>
+     <%= f.input :description %>
+     <%= f.input :ingredient_id , collection: Ingredient.all %>
+     <%= f.submit class: 'button button-purple' %>
+     <% end %>
+
+
+     <%= link_to cocktail_path(@cocktail) do%>
+        <p class="button button-red">Back to the Cocktail</p>
+      <% end %>
+   </div>
+
+
+
 
  </div>
-
-<div class="container mt-3">
- <%= link_to 'Go Back to Cocktail', cocktail_path(@cocktail), class: 'btn btn-danger' %>
 </div>
+
 

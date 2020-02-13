@@ -11,11 +11,14 @@ require 'open-uri'
 
 puts 'Downloading Ingredients'
 
+Ingredient.destroy_all
+
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 user_serialized = open(url).read
 data = JSON.parse(user_serialized)
 data['drinks'].each do |drink|
   Ingredient.create(name: drink['strIngredient1'])
 end
+Ingredient.create(name: ' ')
 
 puts 'Ingredients Downloaded'
