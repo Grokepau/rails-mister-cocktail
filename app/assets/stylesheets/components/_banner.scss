@@ -1,5 +1,5 @@
-.banner {
-  background: linear-gradient(rgba(0,0,0, 0.3)), url('https://source.unsplash.com/1600x900/?cocktail');
+.banner-index {
+  background: linear-gradient(rgba(0,0,0, 0.3)), url('./cocktail-banner2.png');
   background-size: cover;
   color: white;
   width: 100%;
@@ -14,4 +14,16 @@
   h1 {
     margin-left: 32px;
   }
+}
+
+.banner-show {
+  background: linear-gradient(rgba(0,0,0, 0.3)), url('./cocktail-banner2.png');
+  background-size: cover;
+  color: white;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Montserrat;
 }
