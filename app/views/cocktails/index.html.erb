@@ -1,4 +1,24 @@
 <div class="banner">
-  <h2>Cocktails</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2>Welcome to the</h2>
+        <h1>Cocktails</h2>
+        <div>
+          <%= link_to "Add Cocktail", new_cocktail_path, class: 'btn btn-primary mt-3'  %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+    <%= link_to "#{cocktail.name}", cocktail_path(cocktail) %>
+    <% end %>
+
+  </div>
+
 </div>
 
